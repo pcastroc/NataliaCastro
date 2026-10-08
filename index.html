@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Ruta de inglés de B2.1 a C1 en 20 semanas, tres días por semana, para psicología, derechos humanos y comunicación profesional.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128221;</text></svg>">
+<style>
+  :root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+  body{margin:0}
+  img{max-width:100%}
+  [hidden]{display:none!important}
+</style>
+</head>
+<body>
+<title>Ruta C1 de Estefanie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,600;6..96,700&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: una columna editorial centrada; cabecera con progreso, pestañas por mes,
+   tarjetas de semana con tres tareas (una por día); cada mes toma un acento de la paleta. */
+:root{
+  --paper:#FFFBFA;
+  --surface:#FFFFFF;
+  --surface-2:#FDF4F2;
+  --ink:#1B1316;
+  --muted:#7D686C;
+  --line:#EEDCD8;
+  --rose:#B76E79;
+  --rose-deep:#8E4F5A;
+  --rose-soft:#F6E3DF;
+  --gold:#D9A596;
+  --red:#BE1E3C;
+  --red-soft:#FBE3E7;
+  --ok:#5E8C6A;
+  --shadow:0 1px 2px rgba(27,19,22,.05), 0 8px 24px rgba(183,110,121,.08);
+  --display:"Bodoni Moda", "Didot", Georgia, serif;
+  --body:"Nunito", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --radius:16px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#161013;
+    --surface:#1F1619;
+    --surface-2:#271B1F;
+    --ink:#F6EDEB;
+    --muted:#B9A1A5;
+    --line:#3A2A2F;
+    --rose:#DCA0A8;
+    --rose-deep:#EBBDC2;
+    --rose-soft:#36252A;
+    --gold:#E3BCAF;
+    --red:#F08098;
+    --red-soft:#3B2026;
+    --ok:#8FBE9B;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px rgba(0,0,0,.35);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#161013;
+  --surface:#1F1619;
+  --surface-2:#271B1F;
+  --ink:#F6EDEB;
+  --muted:#B9A1A5;
+  --line:#3A2A2F;
+  --rose:#DCA0A8;
+  --rose-deep:#EBBDC2;
+  --rose-soft:#36252A;
+  --gold:#E3BCAF;
+  --red:#F08098;
+  --red-soft:#3B2026;
+  --ok:#8FBE9B;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px rgba(0,0,0,.35);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:16px;
+  line-height:1.6;
+  margin:0;
+}
+.wrap{max-width:860px;margin:0 auto;padding-inline:20px;padding-block:0 64px}
+a{color:var(--rose-deep);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
+  outline:2px solid var(--rose);outline-offset:3px;border-radius:6px
+}
+h1,h2,h3{font-family:var(--display);font-weight:600;text-wrap:balance;margin:0}
+.eyebrow{
+  font-family:var(--body);font-size:.72rem;font-weight:800;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--rose);margin:0
+}
+
+/* ---------- Portada ---------- */
+.cover{padding-block:40px 28px;border-bottom:1px solid var(--line)}
+.cover h1{font-size:clamp(2.1rem,7vw,3.4rem);line-height:1.05;letter-spacing:-.01em;margin-block:10px 6px}
+.cover h1 em{font-style:normal;color:var(--rose)}
+.lead{color:var(--muted);max-width:56ch;margin:0}
+.levels{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:20px}
+.chip{
+  display:inline-flex;align-items:center;gap:7px;background:var(--surface);border:1px solid var(--line);
+  border-radius:999px;padding:6px 13px;font-size:.82rem;font-weight:700;box-shadow:var(--shadow)
+}
+.chip .dot{width:8px;height:8px;border-radius:50%;background:var(--rose);flex:0 0 auto}
+.chip.red .dot{background:var(--red)}
+.chip.ink .dot{background:var(--ink)}
+
+/* ---------- Progreso global ---------- */
+.meter-card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px 20px;margin-top:22px;box-shadow:var(--shadow)
+}
+.meter-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.meter-top strong{font-family:var(--display);font-size:1.6rem;font-variant-numeric:tabular-nums}
+.bar{height:10px;border-radius:999px;background:var(--rose-soft);overflow:hidden;margin-top:12px}
+.bar>span{display:block;height:100%;width:0;border-radius:999px;
+  background:linear-gradient(90deg,var(--gold),var(--rose));transition:width .35s ease}
+.meter-note{font-size:.82rem;color:var(--muted);margin:10px 0 0}
+
+/* ---------- Pestañas ---------- */
+nav.tabs{
+  position:sticky;top:env(safe-area-inset-top, 0px);z-index:20;background:var(--paper);
+  border-bottom:1px solid var(--line);margin-top:26px;
+  display:flex;gap:4px;overflow-x:auto;padding-block:8px;scrollbar-width:thin
+}
+nav.tabs button{
+  flex:0 0 auto;border:0;background:transparent;color:var(--muted);font-family:var(--body);
+  font-weight:700;font-size:.9rem;padding:8px 14px;border-radius:999px;cursor:pointer;white-space:nowrap
+}
+nav.tabs button[aria-selected="true"]{background:var(--rose-soft);color:var(--rose-deep)}
+
+section.panel{padding-block:30px 0}
+section.panel>h2{font-size:clamp(1.5rem,4.5vw,2.1rem);margin-bottom:6px}
+section.panel>.sub{color:var(--muted);margin:0 0 22px;max-width:62ch}
+
+/* ---------- Tarjetas ---------- */
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px;margin-bottom:16px;box-shadow:var(--shadow)
+}
+.card.accent{border-left:4px solid var(--rose)}
+.card.accent.red{border-left-color:var(--red)}
+.card.accent.ink{border-left-color:var(--ink)}
+.week-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap}
+.week-head h3{font-size:1.14rem;line-height:1.25}
+.week-dates{font-size:.78rem;font-weight:700;color:var(--muted);letter-spacing:.04em;white-space:nowrap}
+.focus{font-size:.9rem;color:var(--muted);margin:6px 0 14px;max-width:60ch}
+.now{
+  display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  background:var(--red);color:#fff;border-radius:999px;padding:3px 10px;margin-left:8px;vertical-align:2px
+}
+:root[data-theme="dark"] .now,
+:root:not([data-theme="light"]) .now{color:#2A1016}
+.light-week{
+  display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  background:var(--rose-soft);color:var(--rose-deep);border-radius:999px;padding:3px 10px;margin-left:8px;vertical-align:2px
+}
+
+/* ---------- Tareas ---------- */
+ul.tasks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+ul.tasks li{display:flex;gap:11px;align-items:flex-start;padding:9px 8px;border-radius:10px;min-width:0}
+ul.tasks li:hover{background:var(--surface-2)}
+ul.tasks input[type=checkbox]{
+  appearance:none;flex:0 0 auto;width:20px;height:20px;margin-top:2px;border:2px solid var(--rose);
+  border-radius:7px;cursor:pointer;background:transparent;position:relative;transition:background .15s
+}
+ul.tasks input[type=checkbox]:checked{background:var(--rose);border-color:var(--rose)}
+ul.tasks input[type=checkbox]:checked::after{
+  content:"";position:absolute;left:6px;top:2px;width:5px;height:10px;
+  border:solid var(--surface);border-width:0 2.5px 2.5px 0;transform:rotate(42deg)
+}
+ul.tasks label{flex:1;min-width:0;cursor:pointer;font-size:.95rem}
+ul.tasks input:checked + label{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--rose)}
+.day{
+  display:inline-block;font-family:var(--display);font-size:.78rem;font-weight:700;
+  color:var(--rose);margin-right:8px;letter-spacing:.04em
+}
+.tag{
+  display:inline-block;font-size:.66rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  border-radius:6px;padding:2px 7px;margin-right:7px;vertical-align:1px;
+  background:var(--rose-soft);color:var(--rose-deep)
+}
+.tag.cert{background:var(--red-soft);color:var(--red)}
+.tag.word{background:var(--surface-2);color:var(--muted);border:1px solid var(--line)}
+.go{font-size:.82rem;font-weight:700;white-space:nowrap}
+.wk-bar{height:5px;border-radius:999px;background:var(--rose-soft);overflow:hidden;margin-top:14px}
+.wk-bar>span{display:block;height:100%;width:0;background:var(--rose);transition:width .3s ease}
+.card.accent.red .wk-bar>span{background:var(--red)}
+.card.accent.ink .wk-bar>span{background:var(--ink)}
+
+/* ---------- Tablas ---------- */
+.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:.9rem}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);font-weight:800}
+tr:last-child td{border-bottom:0}
+
+/* ---------- Notas y glosario ---------- */
+textarea{
+  width:100%;min-height:110px;resize:vertical;border:1px solid var(--line);border-radius:12px;
+  background:var(--surface-2);color:var(--ink);font-family:var(--body);font-size:.95rem;padding:12px;line-height:1.55
+}
+.field-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.field-row input{
+  flex:1 1 180px;min-width:0;border:1px solid var(--line);border-radius:10px;background:var(--surface-2);
+  color:var(--ink);font-family:var(--body);font-size:.95rem;padding:10px 12px
+}
+button.btn{
+  border:1px solid var(--rose);background:var(--rose);color:#fff;font-family:var(--body);font-weight:800;
+  font-size:.86rem;border-radius:10px;padding:10px 16px;cursor:pointer
+}
+:root[data-theme="dark"] button.btn,
+:root:not([data-theme="light"]) button.btn{color:#241216}
+button.btn.ghost{background:transparent;color:var(--rose-deep);border-color:var(--line)}
+.word-list{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.word-list li{
+  display:flex;gap:10px;align-items:baseline;justify-content:space-between;
+  padding:9px 12px;background:var(--surface-2);border-radius:10px;font-size:.92rem;min-width:0
+}
+.word-list b{font-family:var(--display);font-weight:600}
+.word-list span{flex:1;min-width:0;color:var(--muted)}
+.word-list button{border:0;background:transparent;color:var(--muted);cursor:pointer;font-size:1rem;line-height:1;padding:2px 4px}
+.saved{font-size:.78rem;color:var(--ok);font-weight:700;margin-left:8px;align-self:center}
+
+.routine{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:4px}
+.routine div{background:var(--surface-2);border-radius:12px;padding:14px;font-size:.88rem}
+.routine b{display:block;font-family:var(--display);font-size:1.02rem;margin-bottom:3px}
+.routine small{color:var(--muted);font-size:.8rem;display:block;line-height:1.45}
+
+ol.steps{padding-left:20px;margin:0;display:flex;flex-direction:column;gap:9px;font-size:.95rem}
+ol.steps li::marker{color:var(--rose);font-weight:800}
+ul.plain{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px;font-size:.95rem}
+ul.plain li{padding-left:18px;position:relative}
+ul.plain li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+
+footer{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:.84rem}
+</style>
+
+<div class="wrap">
+  <header class="cover">
+    <p class="eyebrow">20 semanas &middot; 3 días por semana &middot; 12 oct 2026 — 28 feb 2027</p>
+    <h1>Estefanie Natalia<br><em>de B2.1 a C1</em></h1>
+    <p class="lead">Inglés para psicología, defensa de derechos humanos y conversación profesional, en tres sesiones semanales de menos de una hora. Platzi da la estructura, cinco constancias gratuitas quedan en la hoja de vida, y Word es el cuaderno.</p>
+    <div class="levels">
+      <span class="chip"><span class="dot"></span>Mes 1 · Arranque</span>
+      <span class="chip"><span class="dot"></span>Mes 2 · B2 en firme</span>
+      <span class="chip red"><span class="dot"></span>Mes 3 · Tu profesión</span>
+      <span class="chip red"><span class="dot"></span>Mes 4 · Escribir y defender</span>
+      <span class="chip ink"><span class="dot"></span>Mes 5 · Puente a C1</span>
+    </div>
+    <div class="meter-card">
+      <div class="meter-top">
+        <div><span class="eyebrow">Avance total</span><br><strong id="pct">0%</strong></div>
+        <div id="count" style="color:var(--muted);font-size:.88rem"></div>
+      </div>
+      <div class="bar"><span id="globalBar"></span></div>
+      <p class="meter-note">Lo que marques se guarda en este navegador. Ábrelo siempre desde el mismo equipo para no perder el avance.</p>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs" role="tablist"></nav>
+
+  <main id="panels"></main>
+
+  <footer>
+    <p>Hecho para Estefanie Natalia Castro Castro. Los enlaces abren en una pestaña nueva. Si un curso cambia de nombre en Platzi, búscalo dentro de su ruta de nivel.</p>
+  </footer>
+</div>
+
+<script>
+/* ============ ENLACES ============ */
+const L = {
+  platziB2:"https://platzi.com/ruta/intermediate-core2/",
+  platziC1:"https://platzi.com/ruta/advanced-core/",
+  platziEscuela:"https://platzi.com/escuela/ingles/",
+  efset:"https://www.efset.org/efset/",
+  amnesty:"https://academy.amnesty.org/",
+  openwho:"https://openwho.org/",
+  openlearn:"https://www.open.edu/openlearn/",
+  saylor:"https://learn.saylor.org/course/info.php?id=706",
+  wi:"https://writeandimprove.com/",
+  bbc:"https://www.bbc.co.uk/learningenglish",
+  bc:"https://learnenglish.britishcouncil.org/",
+  apaDict:"https://dictionary.apa.org/",
+  apaPod:"https://www.apa.org/news/podcasts/speaking-of-psychology",
+  ted:"https://www.ted.com/topics/psychology",
+  convex:"https://www.conversationexchange.com/",
+  tandem:"https://tandem.net/",
+  anki:"https://apps.ankiweb.net/"
+};
+
+/* ============ PLAN: 5 meses, 20 semanas, 3 tareas por semana ============ */
+const PLAN = [
+  {
+    id:"m1", accent:"", label:"Mes 1", title:"Mes 1 · Arranque",
+    sub:"Medir de dónde parte, dejar el sistema montado y entrar a la gramática de B2. Un mes tranquilo a propósito: lo que se construye aquí es la costumbre.",
+    weeks:[
+      { id:"s1", n:"Semana 1", dates:"12 – 18 oct", start:"2026-10-12", end:"2026-10-18",
+        title:"Montar el sistema",
+        focus:"Esta semana casi no se estudia: se prepara. Vale la pena hacerla completa.",
+        tasks:[
+          {id:"s1a", day:"Día 1", tag:"Certificado", tagType:"cert", text:"Presentar el EF SET de 50 minutos y guardar el resultado como punto de partida", url:L.efset, go:"efset.org"},
+          {id:"s1b", day:"Día 2", tag:"Platzi", text:"Curso gratis de Estrategias para Aprender Inglés en Línea, y test de nivel de Platzi", url:"https://platzi.com/cursos/estrategias-ingles/", go:"Abrir curso"},
+          {id:"s1c", day:"Día 3", tag:"Word", tagType:"word", text:"Crear los cuatro archivos del cuaderno en una carpeta llamada English C1 (ver la pestaña «Tu Word»)"}
+        ]},
+      { id:"s2", n:"Semana 2", dates:"19 – 25 oct", start:"2026-10-19", end:"2026-10-25",
+        title:"Describir con precisión",
+        focus:"Oraciones relativas e instrucciones: cómo explicar un proceso o un encuadre sin dar rodeos.",
+        tasks:[
+          {id:"s2a", day:"Día 1", tag:"Platzi", text:"Inglés Intermedio Alto B2: Suposiciones e Instrucciones", url:"https://platzi.com/cursos/oraciones-relativas/", go:"Abrir curso"},
+          {id:"s2b", day:"Día 2", text:"Dos episodios de 6 Minute English y diez palabras nuevas al Glosario", url:L.bbc, go:"BBC Learning English"},
+          {id:"s2c", day:"Día 3", text:"Write &amp; Improve: un texto nivel B2 sobre por qué elegiste la psicología", url:L.wi, go:"writeandimprove.com"}
+        ]},
+      { id:"s3", n:"Semana 3", dates:"26 oct – 1 nov", start:"2026-10-26", end:"2026-11-01",
+        title:"Cerrar y fijar",
+        focus:"Terminar el curso con los ejercicios hechos vale más que empezar otro.",
+        tasks:[
+          {id:"s3a", day:"Día 1", tag:"Platzi", text:"Terminar Suposiciones e Instrucciones, con los ejercicios resueltos", url:"https://platzi.com/cursos/oraciones-relativas/", go:"Continuar"},
+          {id:"s3b", day:"Día 2", text:"Diez términos del Diccionario de Psicología de la APA al Glosario, definidos en inglés", url:L.apaDict, go:"dictionary.apa.org"},
+          {id:"s3c", day:"Día 3", tag:"Word", tagType:"word", text:"Estrenar el Diario: cinco líneas en inglés sobre tu semana"}
+        ]},
+      { id:"s4", n:"Semana 4", dates:"2 – 8 nov", start:"2026-11-02", end:"2026-11-08",
+        title:"Opinar y matizar",
+        focus:"Dar una opinión profesional sin sonar tajante. Es la base de todo lo que viene después.",
+        tasks:[
+          {id:"s4a", day:"Día 1", tag:"Platzi", text:"Inglés Intermedio Alto B2: Comentarios y Opiniones", url:"https://platzi.com/cursos/intenciones-comparaciones/", go:"Abrir curso"},
+          {id:"s4b", day:"Día 2", text:"Dos episodios más y diez palabras al Glosario, campo semántico: emociones", url:L.bbc, go:"Escuchar"},
+          {id:"s4c", day:"Día 3", text:"Write &amp; Improve: tu opinión sobre un dilema ético de la práctica clínica", url:L.wi, go:"Escribir"}
+        ]}
+    ]
+  },
+  {
+    id:"m2", accent:"", label:"Mes 2", title:"Mes 2 · B2 en firme",
+    sub:"Pronunciación, pasado perfecto y la primera conversación. Al final del mes llega el primer certificado.",
+    weeks:[
+      { id:"s5", n:"Semana 5", dates:"9 – 15 nov", start:"2026-11-09", end:"2026-11-15",
+        title:"Cómo suenas",
+        focus:"La pronunciación se trabaja ahora, mientras el vocabulario todavía es manejable.",
+        tasks:[
+          {id:"s5a", day:"Día 1", tag:"Platzi", text:"Terminar Comentarios y Opiniones", url:"https://platzi.com/cursos/intenciones-comparaciones/", go:"Continuar"},
+          {id:"s5b", day:"Día 2", tag:"Platzi", text:"Empezar el Curso Intermedio de Pronunciación en Inglés", url:"https://platzi.com/cursos/ingles-intermedio-pronunciacion/", go:"Abrir curso"},
+          {id:"s5c", day:"Día 3", tag:"Word", tagType:"word", text:"Dictar un párrafo en inglés en Word: lo que entienda mal es el sonido que debes corregir"}
+        ]},
+      { id:"s6", n:"Semana 6", dates:"16 – 22 nov", start:"2026-11-16", end:"2026-11-22",
+        title:"Narrar el pasado",
+        focus:"Pasado perfecto y frases adverbiales: la gramática de un relato de caso.",
+        tasks:[
+          {id:"s6a", day:"Día 1", tag:"Platzi", text:"Inglés Intermedio Alto B2: Pasado Perfecto y Frases Adverbiales", url:"https://platzi.com/cursos/pasado-perfecto-frases-adverbiales/", go:"Abrir curso"},
+          {id:"s6b", day:"Día 2", text:"Un episodio de Speaking of Psychology siguiendo la transcripción", url:L.apaPod, go:"Pódcast APA"},
+          {id:"s6c", day:"Día 3", text:"Write &amp; Improve: un relato de caso anonimizado, en pasado", url:L.wi, go:"Escribir"}
+        ]},
+      { id:"s7", n:"Semana 7", dates:"23 – 29 nov", start:"2026-11-23", end:"2026-11-29",
+        title:"La primera conversación",
+        focus:"Veinte minutos hablando con una persona real. Es incómodo una vez; después deja de serlo.",
+        tasks:[
+          {id:"s7a", day:"Día 1", tag:"Platzi", text:"Terminar Pasado Perfecto y Frases Adverbiales", url:"https://platzi.com/cursos/pasado-perfecto-frases-adverbiales/", go:"Continuar"},
+          {id:"s7b", day:"Día 2", text:"Quince términos clínicos al Glosario: assessment, coping, grief, referral, safeguarding", url:L.apaDict, go:"Buscar en la APA"},
+          {id:"s7c", day:"Día 3", text:"Conversación de 20 minutos presentándote como psicóloga", url:L.convex, go:"Conversation Exchange"}
+        ]},
+      { id:"s8", n:"Semana 8", dates:"30 nov – 6 dic", start:"2026-11-30", end:"2026-12-06",
+        title:"Primer certificado",
+        focus:"Derechos humanos estudiados en inglés: el idioma y tu campo, por fin juntos.",
+        tasks:[
+          {id:"s8a", day:"Día 1", tag:"Platzi", text:"Terminar el Curso Intermedio de Pronunciación", url:"https://platzi.com/cursos/ingles-intermedio-pronunciacion/", go:"Continuar"},
+          {id:"s8b", day:"Día 2", tag:"Certificado", tagType:"cert", text:"Amnesty Human Rights Academy: registrarte y empezar un curso corto en inglés", url:L.amnesty, go:"academy.amnesty.org"},
+          {id:"s8c", day:"Día 3", tag:"Certificado", tagType:"cert", text:"Terminar ese curso y descargar el certificado", url:L.amnesty, go:"Mis cursos"}
+        ]}
+    ]
+  },
+  {
+    id:"m3", accent:"red", label:"Mes 3", title:"Mes 3 · Tu profesión en inglés",
+    sub:"Salud mental y apoyo psicosocial, estudiados directamente en inglés con la OMS. Las dos últimas semanas son de fiestas y vienen aligeradas a propósito.",
+    weeks:[
+      { id:"s9", n:"Semana 9", dates:"7 – 13 dic", start:"2026-12-07", end:"2026-12-13",
+        title:"Reportar lo que otro dijo",
+        focus:"Discurso indirecto y condicionales: la gramática de una entrevista y de un informe.",
+        tasks:[
+          {id:"s9a", day:"Día 1", tag:"Platzi", text:"Inglés Intermedio Alto B2: Discurso Indirecto y Condicionales", url:"https://platzi.com/cursos/condicionales-situaciones-hipoteticas/", go:"Abrir curso"},
+          {id:"s9b", day:"Día 2", tag:"Certificado", tagType:"cert", text:"OpenWHO: inscribirte en Mental Health and Psychosocial Support in emergencies y hacer los primeros módulos", url:L.openwho, go:"openwho.org"},
+          {id:"s9c", day:"Día 3", text:"Write &amp; Improve: un correo profesional a una ONG, presentándote", url:L.wi, go:"Escribir"}
+        ]},
+      { id:"s10", n:"Semana 10", dates:"14 – 20 dic", start:"2026-12-14", end:"2026-12-20",
+        title:"Medición de medio camino",
+        focus:"El mismo examen de la semana 1, para comparar sin trampa. Sin preparación previa: así el dato sirve.",
+        tasks:[
+          {id:"s10a", day:"Día 1", tag:"Platzi", text:"Terminar Discurso Indirecto y Condicionales", url:"https://platzi.com/cursos/condicionales-situaciones-hipoteticas/", go:"Continuar"},
+          {id:"s10b", day:"Día 2", text:"OpenWHO: avanzar los módulos del medio", url:L.openwho, go:"Continuar"},
+          {id:"s10c", day:"Día 3", tag:"Certificado", tagType:"cert", text:"EF SET de 50 minutos otra vez, y anotar el puntaje junto al de octubre", url:L.efset, go:"Presentar"}
+        ]},
+      { id:"s11", n:"Semana 11", dates:"21 – 27 dic", start:"2026-12-21", end:"2026-12-27", light:true,
+        title:"Semana ligera",
+        focus:"Son fiestas y hay familia en casa. Se mantiene el contacto con el idioma, nada más.",
+        tasks:[
+          {id:"s11a", day:"Día 1", text:"OpenWHO: un módulo, sin apuro", url:L.openwho, go:"Continuar"},
+          {id:"s11b", day:"Día 2", text:"Dos charlas TED de psicología, repitiendo en voz alta detrás del hablante", url:L.ted, go:"TED · Psychology"},
+          {id:"s11c", day:"Día 3", text:"Una película o serie en inglés con subtítulos en inglés. Eso cuenta como estudiar."}
+        ]},
+      { id:"s12", n:"Semana 12", dates:"28 dic – 3 ene", start:"2026-12-28", end:"2027-01-03", light:true,
+        title:"Cerrar el año",
+        focus:"Segundo certificado y un repaso tranquilo de todo lo acumulado.",
+        tasks:[
+          {id:"s12a", day:"Día 1", tag:"Certificado", tagType:"cert", text:"Terminar el curso de OpenWHO y descargar el certificado", url:L.openwho, go:"Mis cursos"},
+          {id:"s12b", day:"Día 2", tag:"Word", tagType:"word", text:"Repasar el Glosario completo y marcar las treinta palabras que todavía se te escapan"},
+          {id:"s12c", day:"Día 3", tag:"Word", tagType:"word", text:"Diario: diez líneas en inglés sobre cómo te fue el año"}
+        ]}
+    ]
+  },
+  {
+    id:"m4", accent:"red", label:"Mes 4", title:"Mes 4 · Escribir y defender",
+    sub:"Escritura estructurada, vocabulario real y el segundo curso de derechos humanos. Es el mes que más mueve tu inglés escrito.",
+    weeks:[
+      { id:"s13", n:"Semana 13", dates:"4 – 10 ene", start:"2027-01-04", end:"2027-01-10",
+        title:"Volver al ritmo",
+        focus:"Después de fiestas, una semana que retoma sin exigir demasiado.",
+        tasks:[
+          {id:"s13a", day:"Día 1", tag:"Platzi", text:"Inglés Intermedio Alto B2: Hábitos y Aproximaciones", url:"https://platzi.com/cursos/ingleshabitos/", go:"Abrir curso"},
+          {id:"s13b", day:"Día 2", text:"Dos episodios de 6 Minute English y diez palabras al Glosario", url:L.bbc, go:"Escuchar"},
+          {id:"s13c", day:"Día 3", text:"Conversación de 30 minutos", url:L.tandem, go:"Tandem"}
+        ]},
+      { id:"s14", n:"Semana 14", dates:"11 – 17 ene", start:"2027-01-11", end:"2027-01-17",
+        title:"Escribir con estructura",
+        focus:"De escribir correcto a escribir ordenado: párrafos, conectores, registro formal.",
+        tasks:[
+          {id:"s14a", day:"Día 1", tag:"Platzi", text:"Curso Intermedio de Escritura en Inglés", url:"https://platzi.com/cursos/intermedio-escritura/", go:"Abrir curso"},
+          {id:"s14b", day:"Día 2", tag:"Certificado", tagType:"cert", text:"Amnesty Academy: segundo curso en inglés, sobre defensores de derechos humanos o seguridad digital", url:L.amnesty, go:"Ver cursos"},
+          {id:"s14c", day:"Día 3", text:"Write &amp; Improve: un párrafo argumentativo sobre la salud mental como derecho", url:L.wi, go:"Escribir"}
+        ]},
+      { id:"s15", n:"Semana 15", dates:"18 – 24 ene", start:"2027-01-18", end:"2027-01-24",
+        title:"Vocabulario de verdad",
+        focus:"Phrasal verbs y expresiones: lo que separa un inglés correcto de uno que suena natural.",
+        tasks:[
+          {id:"s15a", day:"Día 1", tag:"Platzi", text:"Curso Intermedio de Vocabulario y Expresiones en Inglés", url:"https://platzi.com/cursos/intermedio-vocabulario-expresiones/", go:"Abrir curso"},
+          {id:"s15b", day:"Día 2", tag:"Platzi", text:"Curso de Phrasal Verbs Comunes en Inglés", url:"https://platzi.com/cursos/frases-expresiones-comunes/", go:"Abrir curso"},
+          {id:"s15c", day:"Día 3", tag:"Certificado", tagType:"cert", text:"Terminar el segundo curso de Amnistía y descargar el certificado", url:L.amnesty, go:"Mis cursos"}
+        ]},
+      { id:"s16", n:"Semana 16", dates:"25 – 31 ene", start:"2027-01-25", end:"2027-01-31",
+        title:"Precisión",
+        focus:"Ortografía y puntuación, que es lo que delata a un B2 en un correo de trabajo.",
+        tasks:[
+          {id:"s16a", day:"Día 1", tag:"Platzi", text:"Curso de Ortografía y Puntuación en Inglés", url:"https://platzi.com/cursos/ortografia-puntuacion-ingles/", go:"Abrir curso"},
+          {id:"s16b", day:"Día 2", tag:"Certificado", tagType:"cert", text:"OpenLearn: elegir un curso corto de psicología o salud mental (busca «Mental health») y empezarlo", url:L.openlearn, go:"open.edu/openlearn"},
+          {id:"s16c", day:"Día 3", text:"Write &amp; Improve: tu carta de presentación profesional en inglés", url:L.wi, go:"Escribir"}
+        ]}
+    ]
+  },
+  {
+    id:"m5", accent:"ink", label:"Mes 5", title:"Mes 5 · Puente a C1",
+    sub:"Argumentar, persuadir y presentar: la ruta C1 de Platzi. El mes cierra con el examen completo y la hoja de vida actualizada.",
+    weeks:[
+      { id:"s17", n:"Semana 17", dates:"1 – 7 feb", start:"2027-02-01", end:"2027-02-07",
+        title:"Argumentar",
+        focus:"Sostener una postura, conceder, refutar. El corazón del C1 y de cualquier defensa de derechos.",
+        tasks:[
+          {id:"s17a", day:"Día 1", tag:"Platzi", text:"Inglés Avanzado C1: Argumentos y Discusiones", url:"https://platzi.com/cursos/ingles-avanzado-argumentacion/", go:"Abrir curso"},
+          {id:"s17b", day:"Día 2", tag:"Certificado", tagType:"cert", text:"Terminar el curso de OpenLearn y descargar el Statement of participation", url:L.openlearn, go:"Mi perfil"},
+          {id:"s17c", day:"Día 3", text:"Conversación de 30 minutos, esta vez en formato debate", url:L.convex, go:"Agendar"}
+        ]},
+      { id:"s18", n:"Semana 18", dates:"8 – 14 feb", start:"2027-02-08", end:"2027-02-14",
+        title:"Persuadir",
+        focus:"Convencer con estructura: incidencia, vocería, propuestas de proyecto.",
+        tasks:[
+          {id:"s18a", day:"Día 1", tag:"Platzi", text:"Inglés Avanzado C1: Comunicación Persuasiva y Efectiva", url:"https://platzi.com/cursos/comunicacion-persuasiva/", go:"Abrir curso"},
+          {id:"s18b", day:"Día 2", text:"Dos charlas TED repitiendo encima del hablante, cronometrando dos minutos seguidos", url:L.ted, go:"TED"},
+          {id:"s18c", day:"Día 3", text:"Write &amp; Improve: ensayo argumentativo, apuntando a nivel C1", url:L.wi, go:"Escribir"}
+        ]},
+      { id:"s19", n:"Semana 19", dates:"15 – 21 feb", start:"2027-02-15", end:"2027-02-21",
+        title:"Presentar",
+        focus:"Hablar en público en inglés sobre lo que sabes. Esta es la prueba real.",
+        tasks:[
+          {id:"s19a", day:"Día 1", tag:"Platzi", text:"Inglés Avanzado C1: Presentaciones y Expresión Oral", url:"https://platzi.com/cursos/expresiones-idiomaticas/", go:"Abrir curso"},
+          {id:"s19b", day:"Día 2", tag:"Platzi", text:"Curso Avanzado de Escritura en Inglés", url:"https://platzi.com/cursos/ingles-avanzado-escritura/", go:"Abrir curso"},
+          {id:"s19c", day:"Día 3", tag:"Word", tagType:"word", text:"Grabar una presentación de tres minutos sobre tu trabajo, con el guion escrito y revisado en Word"}
+        ]},
+      { id:"s20", n:"Semana 20", dates:"22 – 28 feb", start:"2027-02-22", end:"2027-02-28",
+        title:"Certificar y mostrar",
+        focus:"Convertir cinco meses de trabajo en documentos que se puedan enseñar.",
+        tasks:[
+          {id:"s20a", day:"Día 1", tag:"Certificado", tagType:"cert", text:"EF SET completo de 90 minutos: lectura, escucha, escritura y habla. Este es el certificado final de nivel", url:L.efset, go:"Presentar"},
+          {id:"s20b", day:"Día 2", text:"Actualizar la hoja de vida y LinkedIn con las cinco constancias (ver la pestaña «Tu HV»)"},
+          {id:"s20c", day:"Día 3", text:"Elegir los cursos que siguen hasta junio de 2027 dentro de la ruta C1 de Platzi", url:L.platziC1, go:"Ruta C1"}
+        ]}
+    ]
+  }
+];
+
+const CERTS = [
+  { n:"EF SET English Certificate", org:"EF Education First", que:"Nivel A1–C2 alineado al Marco Común Europeo. La versión de 90 minutos evalúa lectura, escucha, escritura y habla", cuando:"Semanas 1, 10 y 20", url:L.efset, como:"Gratis, en línea, resultado inmediato y enlace propio para añadir a LinkedIn o a la hoja de vida" },
+  { n:"Human Rights Academy", org:"Amnistía Internacional", que:"Formación en derechos humanos cursada en inglés, con certificado firmado por Amnistía en los cursos que lo ofrecen", cuando:"Semanas 8 y 14", url:L.amnesty, como:"Gratis y autoguiado; hay cursos desde 45 minutos" },
+  { n:"MHPSS in emergencies", org:"OpenWHO · Organización Mundial de la Salud", que:"Salud mental y apoyo psicosocial en emergencias, trece módulos en inglés, unas siete horas", cuando:"Semanas 9 a 12", url:L.openwho, como:"Gratis; el certificado se obtiene con el 80% en las evaluaciones" },
+  { n:"Statement of participation", org:"OpenLearn · The Open University", que:"Curso corto de psicología o salud mental en inglés académico británico", cuando:"Semanas 16 y 17", url:L.openlearn, como:"Gratis; constancia en PDF descargable, y en algunos cursos además una insignia digital" }
+];
+
+const TOOLS = [
+  { n:"Write &amp; Improve", d:"De la Universidad de Cambridge. Escribes un texto y te devuelve el nivel del Marco Común Europeo y qué corregir. Es el termómetro de tu escritura, y es el día 3 de muchas semanas.", url:L.wi, go:"writeandimprove.com" },
+  { n:"BBC Learning English", d:"6 Minute English: audio corto con transcripción y vocabulario. Cabe en un trayecto o mientras cocinas.", url:L.bbc, go:"bbc.co.uk/learningenglish" },
+  { n:"LearnEnglish · British Council", d:"Ejercicios por nivel, B2 y C1, con gramática explicada. Útil cuando un tema de Platzi queda flojo.", url:L.bc, go:"learnenglish.britishcouncil.org" },
+  { n:"APA Dictionary of Psychology", d:"Tu vocabulario técnico: definiciones en inglés de la Asociación Americana de Psicología.", url:L.apaDict, go:"dictionary.apa.org" },
+  { n:"Speaking of Psychology", d:"Pódcast de la APA, entrevistas de 30 minutos con transcripción. Inglés real de tu profesión.", url:L.apaPod, go:"apa.org" },
+  { n:"Conversation Exchange", d:"Intercambio de idiomas por escrito, voz o video. Tú das español, recibes inglés.", url:L.convex, go:"conversationexchange.com" },
+  { n:"Tandem", d:"Lo mismo desde el celular, con chat de voz y videollamada en la versión gratuita.", url:L.tandem, go:"tandem.net" },
+  { n:"Anki", d:"Repaso espaciado para el glosario, en ratos de cinco minutos. Gratis en computador y Android.", url:L.anki, go:"apps.ankiweb.net" }
+];
+
+/* ============ ESTADO ============ */
+const KEY = "ruta-c1-estefanie-v2";
+let state = { done:{}, notes:{}, words:[] };
+try { const raw = localStorage.getItem(KEY); if (raw) state = Object.assign(state, JSON.parse(raw)); } catch(e){}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){} }
+
+const allTasks = PLAN.flatMap(m => m.weeks.flatMap(w => w.tasks.map(t => t.id)));
+
+/* ============ RENDER ============ */
+const tabsEl = document.getElementById("tabs");
+const panelsEl = document.getElementById("panels");
+
+const TABS = [
+  {id:"inicio", label:"Cómo funciona"},
+  ...PLAN.map(m => ({id:m.id, label:m.label})),
+  {id:"certs", label:"Certificados"},
+  {id:"tools", label:"Herramientas"},
+  {id:"word", label:"Tu Word"},
+  {id:"hv", label:"Tu HV"}
+];
+
+function esc(s){ return String(s).replace(/&(?![a-z]+;)/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+function taskHTML(t){
+  const tagClass = t.tagType === "cert" ? "tag cert" : t.tagType === "word" ? "tag word" : "tag";
+  const tag = t.tag ? '<span class="' + tagClass + '">' + t.tag + '</span>' : "";
+  const day = t.day ? '<span class="day">' + t.day + '</span>' : "";
+  const link = t.url ? ' <a class="go" href="' + t.url + '" target="_blank" rel="noopener">' + t.go + ' &#8599;</a>' : "";
+  const checked = state.done[t.id] ? " checked" : "";
+  return '<li><input type="checkbox" id="' + t.id + '" data-task="' + t.id + '"' + checked + '>' +
+         '<label for="' + t.id + '">' + day + tag + t.text + link + '</label></li>';
+}
+
+function weekHTML(w, accent){
+  const light = w.light ? '<span class="light-week">ligera</span>' : "";
+  return '<article class="card accent ' + accent + '">' +
+    '<div class="week-head"><h3>' + w.n + ' · ' + w.title + light +
+    '<span class="now" hidden data-now="' + w.id + '">esta semana</span></h3>' +
+    '<span class="week-dates">' + w.dates + '</span></div>' +
+    '<p class="focus">' + w.focus + '</p>' +
+    '<ul class="tasks">' + w.tasks.map(taskHTML).join("") + '</ul>' +
+    '<div class="wk-bar"><span data-wkbar="' + w.id + '"></span></div>' +
+  '</article>';
+}
+
+function monthPanel(m){
+  return '<section class="panel" id="panel-' + m.id + '" role="tabpanel" hidden>' +
+    '<h2>' + m.title + '</h2><p class="sub">' + m.sub + '</p>' +
+    m.weeks.map(w => weekHTML(w, m.accent)).join("") +
+    '<div class="card"><span class="eyebrow">Notas del mes</span>' +
+    '<p class="focus">Qué te costó, qué palabras se repiten, con qué te sentiste cómoda. Se guarda sola.</p>' +
+    '<textarea data-note="' + m.id + '" placeholder="Escribe aquí…"></textarea></div>' +
+  '</section>';
+}
+
+const inicioPanel = `
+<section class="panel" id="panel-inicio" role="tabpanel">
+  <h2>Cómo funciona</h2>
+  <p class="sub">Veinte semanas, tres días a la semana, una sola tarea por día. Nunca hay más de tres cosas pendientes al mismo tiempo: si una semana se ve larga, es que algo está mal y hay que recortarla.</p>
+
+  <div class="card accent">
+    <span class="eyebrow">La semana tipo</span>
+    <h3 style="margin:6px 0 14px">Tres sesiones de 45 minutos</h3>
+    <div class="routine">
+      <div><b>Día 1 · Platzi</b><small>El curso de la semana, con los ejercicios hechos. Es el día que no se negocia.</small></div>
+      <div><b>Día 2 · Entrada</b><small>Escuchar y leer: pódcast, episodio corto, módulo de un curso. Diez palabras al Glosario.</small></div>
+      <div><b>Día 3 · Salida</b><small>Producir: un texto en Write &amp; Improve, una conversación o un certificado que se cierra.</small></div>
+    </div>
+    <p class="focus" style="margin:14px 0 0">Elige tú los tres días y déjalos fijos en el calendario del celular. Lo que funciona con trabajo e hijo no es encontrar tiempo, es tenerlo apartado de antemano.</p>
+  </div>
+
+  <div class="card accent red">
+    <span class="eyebrow">Supuestos</span>
+    <h3 style="margin:6px 0 12px">Lo que di por hecho para armar esto</h3>
+    <ul class="plain">
+      <li>Tres días por semana, entre 45 minutos y una hora cada día: dos a tres horas semanales, no más. El plan está calculado sobre eso y no sobre un escenario ideal.</li>
+      <li>Empiezas el lunes 12 de octubre de 2026 y cierras el domingo 28 de febrero de 2027: veinte semanas.</li>
+      <li>Tienes trabajo, hijo y casa. Por eso hay una sola tarea por día, dos semanas aligeradas en fiestas y ninguna tarea que dependa de un horario fijo con otra persona, salvo las tres conversaciones.</li>
+      <li>Tu Platzi está activo hasta junio de 2027 y no te interesan sus certificados: aquí se usa solo como contenido, y las constancias salen de fuentes externas gratuitas.</li>
+      <li>Partes de B2.1, el comienzo de B2. Con este ritmo, en cinco meses llegas a un B2 alto consolidado y entras con solidez al C1: argumentas, presentas y escribes en registro formal. Certificar un C1 pleno suele tomar más tiempo desde B2 inicial, y por eso el plan termina con el examen completo y con los cursos que siguen hasta junio de 2027.</li>
+      <li>El nivel se mide tres veces con el mismo examen, en las semanas 1, 10 y 20, para que la comparación sea limpia.</li>
+      <li>Todos los recursos externos son gratuitos. Ninguno pide tarjeta.</li>
+    </ul>
+    <p style="margin:16px 0 0"><a href="${L.platziB2}" target="_blank" rel="noopener">Ruta B2 de Platzi &#8599;</a> &nbsp;·&nbsp; <a href="${L.platziC1}" target="_blank" rel="noopener">Ruta C1 &#8599;</a> &nbsp;·&nbsp; <a href="${L.platziEscuela}" target="_blank" rel="noopener">Escuela completa &#8599;</a></p>
+  </div>
+
+  <div class="card accent ink">
+    <span class="eyebrow">Tres reglas</span>
+    <h3 style="margin:6px 0 12px">Para que el plan aguante cinco meses</h3>
+    <ol class="steps">
+      <li><b>Si la semana se cae, haz solo el día 1.</b> Un curso avanzado vale más que tres tareas a medias. El resto se deja ir sin culpa.</li>
+      <li><b>No recuperes semanas perdidas.</b> Sigue en la semana que corresponda por fecha. El plan tiene holgura, y las semanas de repaso existen justo para eso.</li>
+      <li><b>Produce desde el principio.</b> Escuchar y leer son cómodos; escribir y hablar son los que suben el nivel. Por eso el día 3 nunca es de consumo.</li>
+    </ol>
+  </div>
+</section>`;
+
+const certsPanel = `
+<section class="panel" id="panel-certs" role="tabpanel" hidden>
+  <h2>Certificados gratuitos</h2>
+  <p class="sub">Cinco constancias verificables dentro de estas veinte semanas, todas sin costo. Una certifica tu nivel de inglés; las otras demuestran que estudiaste tu propia disciplina en inglés, que es lo que de verdad pesa en una hoja de vida.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Certificado</th><th>Qué acredita</th><th>Cuándo</th><th>Condiciones</th></tr></thead>
+      <tbody>
+        ${CERTS.map(c => `<tr>
+          <td><b>${c.n}</b><br><span style="color:var(--muted);font-size:.85em">${c.org}</span><br><a class="go" href="${c.url}" target="_blank" rel="noopener">Abrir &#8599;</a></td>
+          <td>${c.que}</td>
+          <td style="white-space:nowrap">${c.cuando}</td>
+          <td>${c.como}</td>
+        </tr>`).join("")}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card accent" style="margin-top:18px">
+    <span class="eyebrow">Si más adelante quiere algo grande</span>
+    <p style="margin:8px 0 0">Saylor Academy ofrece <b>PSYCH101: Introduction to Psychology</b>, un curso universitario completo en inglés, con examen final y certificado gratuito. Son unas 46 horas, así que no cabe en tres sesiones semanales junto con todo lo demás: queda como proyecto para después de febrero, cuando el inglés ya no sea el obstáculo. <a href="${L.saylor}" target="_blank" rel="noopener">Ver el curso &#8599;</a></p>
+  </div>
+
+  <div class="card accent red">
+    <span class="eyebrow">Advertencia útil</span>
+    <p style="margin:8px 0 0">Ningún certificado gratuito reemplaza un examen oficial pagado como el IELTS, el TOEFL o el C1 Advanced de Cambridge. Lo que sí hacen, y bien, es sostener lo que escribes en la hoja de vida: si dices «inglés C1», el EF SET da una cifra alineada al Marco Común Europeo que respalda la afirmación, y los demás muestran uso real del idioma en psicología y derechos humanos. Si algún día necesitas el examen oficial, llegarás a él con el trabajo ya hecho.</p>
+  </div>
+</section>`;
+
+const toolsPanel = `
+<section class="panel" id="panel-tools" role="tabpanel" hidden>
+  <h2>Herramientas de todos los días</h2>
+  <p class="sub">Todo gratuito. Guárdalas en marcadores el primer día y no busques más: la dispersión cuesta más tiempo que el estudio.</p>
+  ${TOOLS.map(t => `<div class="card"><h3 style="font-size:1.05rem">${t.n}</h3><p class="focus" style="margin:6px 0 10px">${t.d}</p><a class="go" href="${t.url}" target="_blank" rel="noopener">${t.go} &#8599;</a></div>`).join("")}
+  <div class="card accent" id="glosario">
+    <span class="eyebrow">Glosario rápido</span>
+    <h3 style="margin:6px 0 6px">Palabras que no se te pueden olvidar</h3>
+    <p class="focus">Para anotar desde el celular cuando no tengas Word a mano. Después las pasas al cuaderno con el botón de copiar.</p>
+    <div class="field-row">
+      <input id="wIn" placeholder="Palabra o expresión en inglés" autocomplete="off">
+      <input id="dIn" placeholder="Significado o ejemplo" autocomplete="off">
+      <button class="btn" id="addWord">Agregar</button>
+    </div>
+    <div class="field-row" style="margin:0">
+      <button class="btn ghost" id="copyWords">Copiar todo para pegar en Word</button>
+      <span class="saved" id="copyMsg" hidden>Copiado</span>
+    </div>
+    <ul class="word-list" id="wordList"></ul>
+  </div>
+</section>`;
+
+const wordPanel = `
+<section class="panel" id="panel-word" role="tabpanel" hidden>
+  <h2>Tu Word, bien usado</h2>
+  <p class="sub">Es tu mejor herramienta, así que aquí es el centro del sistema y no un bloc de notas. Cuatro archivos y cuatro funciones que casi nadie abre.</p>
+
+  <div class="card accent">
+    <span class="eyebrow">Los cuatro archivos</span>
+    <h3 style="margin:6px 0 12px">En una carpeta llamada English C1</h3>
+    <ul class="plain">
+      <li><b>01 Glosario.docx</b> — una tabla de cuatro columnas: término en inglés, definición en inglés (nunca en español), ejemplo de tu campo y fecha. Se ordena alfabéticamente con el botón de ordenar de la tabla.</li>
+      <li><b>02 Diario.docx</b> — cinco líneas en inglés los días que estudies. Cinco, no más: la constancia pesa más que la extensión.</li>
+      <li><b>03 Borradores.docx</b> — cada texto de Write &amp; Improve con su corrección al lado, en dos columnas: lo que escribiste y lo que debió ser.</li>
+      <li><b>04 Registro.docx</b> — una fila por semana: curso terminado, puntaje de Write &amp; Improve, minutos de conversación. En veinte semanas esa tabla es la prueba de tu avance, y el material de tu próxima entrevista.</li>
+    </ul>
+  </div>
+
+  <div class="card accent red">
+    <span class="eyebrow">Las cuatro funciones</span>
+    <h3 style="margin:6px 0 12px">Para practicar, no solo para escribir</h3>
+    <ul class="plain">
+      <li><b>Dictar</b>, en la pestaña Inicio — pon el idioma en English y lee en voz alta. Lo que Word escriba mal es exactamente el sonido que debes corregir. Es el mejor corrector de pronunciación gratuito que tienes.</li>
+      <li><b>Leer en voz alta</b>, en la pestaña Revisar — te lee tus propios textos en inglés. Escúchalos y repite encima.</li>
+      <li><b>Editor</b>, en la pestaña Revisar — con el idioma de revisión en inglés, marca tus errores recurrentes. Anota en el Registro cuál se repite más: ese es tu objetivo del mes.</li>
+      <li><b>Comentarios</b> — cuando corrijas un borrador, explícate en un comentario por qué estaba mal. Explicar fija el aprendizaje mucho más que reescribir la frase correcta.</li>
+    </ul>
+  </div>
+
+  <div class="card accent ink">
+    <span class="eyebrow">Truco de glosario</span>
+    <p style="margin:8px 0 0">Define siempre en inglés. En el momento en que traduces, tu cabeza guarda una equivalencia; cuando defines, guarda el concepto. Es la diferencia entre entender <i>grief</i> y poder usar <i>grief</i> en una frase propia. Usa el diccionario de la APA para los términos de tu campo y un diccionario monolingüe para el resto.</p>
+  </div>
+</section>`;
+
+const hvPanel = `
+<section class="panel" id="panel-hv" role="tabpanel" hidden>
+  <h2>Qué entra a tu hoja de vida</h2>
+  <p class="sub">Al terminar febrero tienes material para tres secciones distintas de la hoja de vida y del perfil de LinkedIn. Así se escribe cada cosa.</p>
+
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Dónde</th><th>Qué poner</th><th>Cómo redactarlo</th></tr></thead>
+      <tbody>
+        <tr><td><b>Perfil o resumen</b></td><td>El nivel de inglés</td><td>«Inglés B2 alto / C1 (EF SET, febrero 2027)». Con fecha y fuente, porque un nivel sin respaldo no se lee como dato sino como opinión.</td></tr>
+        <tr><td><b>Formación complementaria</b></td><td>Los cursos de contenido</td><td>Nombre del curso en inglés, institución y año. Deja visible que fue en inglés: «cursado en inglés» entre paréntesis.</td></tr>
+        <tr><td><b>Competencias</b></td><td>Lo que ya puedes hacer</td><td>«Lectura de literatura científica en inglés», «redacción de informes y correspondencia profesional en inglés», «conversación profesional».</td></tr>
+        <tr><td><b>LinkedIn · Licencias y certificaciones</b></td><td>Las cinco constancias</td><td>El EF SET se añade con su enlace propio. Los demás con el nombre de la entidad, el mes y el enlace de verificación cuando lo tengan.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card accent" style="margin-top:18px">
+    <span class="eyebrow">Después del 28 de febrero</span>
+    <h3 style="margin:6px 0 12px">Qué sigue hasta junio de 2027</h3>
+    <ul class="plain">
+      <li>Terminar la ruta C1 de Platzi: quedan recursos conversacionales, vocabulario avanzado, pronunciación avanzada y conectores informales.</li>
+      <li>Un curso de contenido en inglés por trimestre, de Amnistía, OpenWHO u OpenLearn, para que el idioma siga unido a tu profesión.</li>
+      <li>Repetir el EF SET en abril y en junio. Cinco puntos en nueve meses dibujan una curva, y una curva es un argumento en una entrevista.</li>
+      <li>Si en junio el objetivo es un certificado oficial, los cursos de preparación para IELTS y TOEFL están dentro de tu Platzi hasta esa fecha.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <span class="eyebrow">Notas para la HV</span>
+    <p class="focus">Lo que vayas logrando, anótalo aquí mientras lo tienes fresco: fechas, puntajes y enlaces.</p>
+    <textarea data-note="hv" placeholder="Certificados obtenidos, fechas, enlaces…"></textarea>
+  </div>
+</section>`;
+
+panelsEl.innerHTML = inicioPanel + PLAN.map(monthPanel).join("") + certsPanel + toolsPanel + wordPanel + hvPanel;
+
+tabsEl.innerHTML = TABS.map((t,i) =>
+  '<button role="tab" data-tab="' + t.id + '" aria-selected="' + (i===0) + '">' + t.label + '</button>').join("");
+
+document.querySelectorAll("textarea[data-note]").forEach(ta => {
+  const k = ta.dataset.note;
+  if (state.notes[k]) ta.value = state.notes[k];
+  ta.addEventListener("input", () => { state.notes[k] = ta.value; save(); });
+});
+
+/* ============ PESTAÑAS ============ */
+tabsEl.addEventListener("click", e => {
+  const b = e.target.closest("button[data-tab]");
+  if (b) showTab(b.dataset.tab);
+});
+function showTab(id){
+  tabsEl.querySelectorAll("button").forEach(x => x.setAttribute("aria-selected", String(x.dataset.tab === id)));
+  document.querySelectorAll("section.panel").forEach(p => { p.hidden = (p.id !== "panel-" + id); });
+  try { localStorage.setItem(KEY + ":tab", id); } catch(e){}
+  window.scrollTo({ top:0, behavior:"smooth" });
+}
+
+/* ============ TAREAS ============ */
+panelsEl.addEventListener("change", e => {
+  const cb = e.target.closest("input[data-task]");
+  if (!cb) return;
+  state.done[cb.dataset.task] = cb.checked;
+  save();
+  refresh();
+});
+
+function refresh(){
+  const total = allTasks.length;
+  const done = allTasks.filter(id => state.done[id]).length;
+  const pct = total ? Math.round(done * 100 / total) : 0;
+  document.getElementById("pct").textContent = pct + "%";
+  document.getElementById("globalBar").style.width = pct + "%";
+  document.getElementById("count").textContent = done + " de " + total + " tareas completadas";
+  PLAN.forEach(m => m.weeks.forEach(w => {
+    const ids = w.tasks.map(t => t.id);
+    const d = ids.filter(id => state.done[id]).length;
+    const el = document.querySelector('[data-wkbar="' + w.id + '"]');
+    if (el) el.style.width = (ids.length ? Math.round(d * 100 / ids.length) : 0) + "%";
+  }));
+}
+
+/* ============ SEMANA EN CURSO ============ */
+(function markNow(){
+  const now = new Date();
+  const t = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+  PLAN.forEach(m => m.weeks.forEach(w => {
+    const s = new Date(w.start + "T00:00:00").getTime();
+    const e = new Date(w.end + "T23:59:59").getTime();
+    if (t >= s && t <= e){
+      const badge = document.querySelector('[data-now="' + w.id + '"]');
+      if (badge) badge.hidden = false;
+    }
+  }));
+})();
+
+/* ============ GLOSARIO ============ */
+const wordList = document.getElementById("wordList");
+function renderWords(){
+  if (!state.words.length){
+    wordList.innerHTML = '<li style="color:var(--muted);background:transparent;padding-left:0">Todavía no has agregado palabras.</li>';
+    return;
+  }
+  wordList.innerHTML = state.words.map((w,i) =>
+    '<li><b>' + esc(w.t) + '</b><span>' + esc(w.d) + '</span>' +
+    '<button data-del="' + i + '" aria-label="Quitar ' + esc(w.t) + '">&#10005;</button></li>').join("");
+}
+document.getElementById("addWord").addEventListener("click", () => {
+  const wIn = document.getElementById("wIn"), dIn = document.getElementById("dIn");
+  const t = wIn.value.trim(); if (!t){ wIn.focus(); return; }
+  state.words.push({ t, d: dIn.value.trim() });
+  wIn.value = ""; dIn.value = ""; wIn.focus();
+  save(); renderWords();
+});
+document.getElementById("wIn").addEventListener("keydown", e => { if (e.key === "Enter") document.getElementById("dIn").focus(); });
+document.getElementById("dIn").addEventListener("keydown", e => { if (e.key === "Enter") document.getElementById("addWord").click(); });
+wordList.addEventListener("click", e => {
+  const b = e.target.closest("button[data-del]");
+  if (!b) return;
+  state.words.splice(Number(b.dataset.del), 1);
+  save(); renderWords();
+});
+document.getElementById("copyWords").addEventListener("click", async () => {
+  const text = state.words.map(w => w.t + "\t" + w.d).join("\n");
+  const msg = document.getElementById("copyMsg");
+  try {
+    await navigator.clipboard.writeText(text);
+    msg.hidden = false; setTimeout(() => { msg.hidden = true; }, 2000);
+  } catch(err){
+    const sel = window.getSelection(), r = document.createRange();
+    r.selectNodeContents(wordList);
+    sel.removeAllRanges(); sel.addRange(r);
+  }
+});
+
+/* ============ ARRANQUE ============ */
+renderWords();
+refresh();
+let startTab = "inicio";
+try { const t = localStorage.getItem(KEY + ":tab"); if (t && TABS.some(x => x.id === t)) startTab = t; } catch(e){}
+showTab(startTab);
+</script>
+</body>
+</html>
